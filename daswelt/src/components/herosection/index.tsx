@@ -17,14 +17,31 @@ export function Hero() {
     return (
         <div className="w-[60%]">
             <div className="flex flex-col">
-                <span className="text-4xl text-amber-500 font-bold">Facilitando Sua Importação/Exporação!</span>
-                <span className="font-bold pb-0.5">Mediação de Negócios e licitações com eficiência e segurança</span>
+                <span className="text-4xl text-amber-500 font-bold">Facilitando Seu Negócio!</span>
+                <span className="font-bold pb-0.5">Intermediação de Negócios e Consultorias com eficiência e segurança</span>
             </div>
             <hr className="py-0.5" />
-            <section className="pb-4">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, veritatis laboriosam consequatur corrupti sint illum?</span>
+            <section className="pb-7 flex flex-col">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, 
+                    voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, 
+                    veritatis laboriosam consequatur corrupti sint illum?
+                </span>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, 
+                    voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, 
+                    veritatis laboriosam consequatur corrupti sint illum?
+                </span>
             </section>
             <CTAButton/>
+            <section className="pt-7 flex flex-col">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, 
+                    voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, 
+                    veritatis laboriosam consequatur corrupti sint illum?
+                </span>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, 
+                    voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, 
+                    veritatis laboriosam consequatur corrupti sint illum?
+                </span>
+            </section>
         </div>
     )
 }
