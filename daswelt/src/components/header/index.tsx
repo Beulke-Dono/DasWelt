@@ -8,22 +8,17 @@ function NavLinks({ mobile = false }) {
     return (
         <ul className={`${mobile ? "flex flex-col items-center gap-4" : "flex items-center gap-8"}`}>
             <li>
-                <Link className="hover:text-gray-300 transition-colors duration-200" href="#">
-                    Início
-                </Link>
-            </li>
-            <li>
-                <Link className="hover:text-gray-300 transition-colors duration-200" href="#">
+                <Link className="hover:text-gray-300 transition-colors duration-200" href="#servicos">
                     Serviços
                 </Link>
             </li>
             <li>
-                <Link className="hover:text-gray-300 transition-colors duration-200" href="#">
+                <Link className="hover:text-gray-300 transition-colors duration-200" href="#inicio">
                     Sobre Nós
                 </Link>
             </li>
             <li>
-                <Link className="hover:text-gray-300 transition-colors duration-200" href="#">
+                <Link className="hover:text-gray-300 transition-colors duration-200" href="#contato">
                     Contato
                 </Link>
             </li>
@@ -35,10 +30,10 @@ function NavLinks({ mobile = false }) {
 function CTAButton() {
     return (
         <Link
-            href="#"
+            href="#formulario"
             className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"
         >
-            Login
+            Contate-nos!
         </Link>
     );
 }

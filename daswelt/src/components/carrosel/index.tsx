@@ -5,22 +5,21 @@ import { useState, useEffect } from "react";
 export function Carrossel() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Dados dos slides (pode ser substituído por props ou uma API)
     const slides = [
         {
             image: "/images/concept.jpg",
-            title: "Intermediação de Negócios Internacionais",
-            description: "Conectamos empresas a oportunidades globais.",
+            title: "Intermediação de Negócios",
+            description: "Conectamos empresas a novas oportunidades.",
         },
         {
             image: "/images/production.jpg",
-            title: "Consultoria em Licitações",
+            title: "Licitações",
             description: "Maximize suas chances de sucesso em licitações públicas e privadas.",
         },
         {
             image: "/images/consulting.jpg",
-            title: "Cases de Sucesso",
-            description: "Aumentamos as exportações da Empresa X em 30%.",
+            title: "Consultoria de Negócios",
+            description: "Aumentamos .",
         },
     ];
 
@@ -58,9 +57,9 @@ export function Carrossel() {
                     >
                         <div className="absolute inset-0 bg-opacity-50 flex items-center justify-center">
                             <div className="bg-white/10 backdrop-blur-md p-8 rounded-lg border border-white/10 text-center">
-                                <h2 className="text-3xl md:text-5xl font-bold">{slide.title}</h2>
+                                <h2 className="text-2xl md:text-5xl font-bold">{slide.title}</h2>
                                 <p className="mt-4 text-lg pb-6 md:text-xl">{slide.description}</p>
-                                <Link href={"#"} className="mt-8 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold">
+                                <Link href={"#formulario"} className="mt-8 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold">
                                     Saiba Mais
                                 </Link>
                             </div>
@@ -71,13 +70,15 @@ export function Carrossel() {
 
             {/* Botões de Navegação */}
             <button
-                className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full"
+                className="absolute top-1/2 left-4 transform 
+                -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full hover:bg-gray-200 transition-colors duration-200"
                 onClick={prevSlide}
             >
                 &lt;
             </button>
             <button
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full"
+                className="absolute top-1/2 right-4 transform 
+                -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full hover:bg-gray-200 transition-colors duration-200"
                 onClick={nextSlide}
             >
                 &gt;

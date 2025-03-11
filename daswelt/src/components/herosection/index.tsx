@@ -1,12 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 // Subcomponente para o botão de CTA
 function CTAButton() {
     return (
         <Link
-            href="#"
-            className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold
-             hover:bg-blue-400 transition-colors duration-200"
+            href="#formulario"
+            className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg"
         >
             Solicite uma Consultoria
         </Link>
@@ -15,33 +15,40 @@ function CTAButton() {
 
 export function Hero() {
     return (
-        <div className="w-[60%]">
-            <div className="flex flex-col">
-                <span className="text-4xl text-amber-500 font-bold">Facilitando Seu Negócio!</span>
-                <span className="font-bold pb-0.5">Intermediação de Negócios e Consultorias com eficiência e segurança</span>
+        <div id="inicio" className="w-full min-h-screen flex items-center justify-center bg-gray-50">
+            <div className="w-[90%] max-w-6xl flex flex-col md:flex-row items-center gap-10">
+                {/* Texto e CTA */}
+                <div className="flex-1 space-y-6 text-center md:text-left">
+                    <div className="space-y-4">
+                        <span className="text-4xl md:text-6xl font-bold text-gray-900">
+                            Facilitando Seu <span className="text-amber-500">Negócio!</span>
+                        </span>
+                        <p className="pt-3 text-lg md:text-xl text-gray-600">
+                            Conectamos empresas a oportunidades com intermediação de negócios e consultorias especializadas.
+                        </p>
+                    </div>
+                    <hr className="border-t-2 border-gray-200" />
+                    <p className="text-base md:text-lg text-gray-600">
+                        Na Das Welt, oferecemos soluções para importação, exportação e licitações, garantindo eficiência e segurança em cada etapa.
+                    </p>
+                    <div className="flex justify-center md:justify-start">
+                        <CTAButton />
+                    </div>
+                </div>
+
+                {/* Imagem */}
+                <div className="flex-1 hidden md:flex justify-center mt-8 md:mt-0">
+                    <div className="relative w-full h-64 md:h-[500px]">
+                        <Image
+                            src="/images/shaking.jpg"
+                            alt="Aperto de mãos simbolizando negócios"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="rounded-lg shadow-2xl"
+                        />
+                    </div>
+                </div>
             </div>
-            <hr className="py-0.5" />
-            <section className="pb-7 flex flex-col">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, 
-                    voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, 
-                    veritatis laboriosam consequatur corrupti sint illum?
-                </span>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, 
-                    voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, 
-                    veritatis laboriosam consequatur corrupti sint illum?
-                </span>
-            </section>
-            <CTAButton/>
-            <section className="pt-7 flex flex-col">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, 
-                    voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, 
-                    veritatis laboriosam consequatur corrupti sint illum?
-                </span>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque nobis illum rerum, 
-                    voluptatem necessitatibus. Ad at eaque, nisi perferendis ea dignissimos, rerum nulla, 
-                    veritatis laboriosam consequatur corrupti sint illum?
-                </span>
-            </section>
         </div>
-    )
+    );
 }
